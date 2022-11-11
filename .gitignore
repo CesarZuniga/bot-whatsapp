@@ -8,5 +8,5 @@ media/*
 mediaSend/*
 !mediaSend/.gitkeep
 !mediaSend/nota-de-voz.mp3
-.env
+# .env
 .wwebjs_auth
