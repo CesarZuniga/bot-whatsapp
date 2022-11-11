@@ -20,7 +20,9 @@ RUN apt-get install -y ca-certificates fonts-liberation libappindicator3-1 libas
 
 # Bundle app source
 COPY . .
+
 RUN rm -f ".wwebjs_auth/session"
+
 EXPOSE 3000
-VOLUME ["/var/www"]
+
 CMD [ "node", "app.js" ]
