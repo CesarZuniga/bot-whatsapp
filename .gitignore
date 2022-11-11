@@ -5,7 +5,7 @@ chats/*
 !chats/.gitkeep
 media/*
 !media/.gitkeep
-# mediaSend/*
+mediaSend/*
 !mediaSend/.gitkeep
 !mediaSend/nota-de-voz.mp3
 # .env
