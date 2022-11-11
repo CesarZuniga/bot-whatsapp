@@ -1,32 +1,21 @@
-FROM debian:bullseye as builder
+FROM node:16
 
-ARG NODE_VERSION=16.14.0
+# Create app directory
+WORKDIR /usr/src/app
 
-RUN apt-get update; apt install -y curl
-RUN curl https://get.volta.sh | bash
-ENV VOLTA_HOME /root/.volta
-ENV PATH /root/.volta/bin:$PATH
-RUN volta install node@${NODE_VERSION}
-
-#######################################################################
-
-RUN mkdir /app
-WORKDIR /app
-
-ENV NODE_ENV production
-
-COPY . .
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package*.json ./
 
 RUN npm install
-FROM debian:bullseye
+RUN apt-get update
+RUN apt-get install -y ca-certificates fonts-liberation libappindicator3-1 libasound2 libatk-bridge2.0-0 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgbm1 libgcc1 libglib2.0-0 libgtk-3-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 lsb-release wget xdg-utils
+# If you are building your code for production
+# RUN npm ci --only=production
 
-LABEL fly_launch_runtime="nodejs"
+# Bundle app source
+COPY . .
 
-COPY --from=builder /root/.volta /root/.volta
-COPY --from=builder /app /app
-
-WORKDIR /app
-ENV NODE_ENV production
-ENV PATH /root/.volta/bin:$PATH
-
-CMD [ "npm", "run", "start" ]
+EXPOSE 3000
+CMD [ "node", "app.js" ]
