@@ -21,6 +21,7 @@ const MULTI_DEVICE = process.env.MULTI_DEVICE || 'true';
 const server = require('http').Server(app)
 
 const port = process.env.PORT || 3000
+const host = process.env.HOST || '0.0.0.0'
 var client;
 app.use('/', require('./routes/web'))
 
@@ -171,7 +172,7 @@ if (process.env.DATABASE === 'mysql') {
     mysqlConnection.connect()
 }
 
-server.listen(port, () => {
+server.listen(port,host, () => {
     console.log(`El server esta listo por el puerto ${port}`);
 })
 checkEnvFile();
