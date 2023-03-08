@@ -48,14 +48,14 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 //     [flowSecundario]
 // )
 
-const flowPrincipal = addKeyword(['cita', 'citas', 'sita', 'sitas'])
-    .addAnswer('🙌 Hola bienvenid@ a *Beauty&Chic*')
+const flowPrincipal = addKeyword(['cita', 'citas', 'sita', 'sitas', 'tendrás espacio','tendras espacio','tienes espacio'])
+    .addAnswer('🙌 Hola bienvenid@ a *Beauty&Chic* 💜💜')
     .addAnswer(
         [
-            'para checar precios, servicios y agendar Cita',
+            'para checar precios, servicios y agendar *cita*',
             'puedes usar este enlace!!!',
             '👉 https://book.heygoldie.com/Beauty-Chic',
-            '👉 *gracias* ',
+            ' *Gracias* 😊',
         ]
     )
 
