@@ -48,7 +48,7 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 //     [flowSecundario]
 // )
 
-const flowPrincipal = addKeyword(['cita', 'citas', 'sita', 'sitas', 'tendrás espacio','tendras espacio','tienes espacio'])
+const flowPrincipal = addKeyword(['cita', 'citas', 'sita', 'sitas', 'tendrás espacio','tendras espacio','tienes espacio', 'agenda'])
     .addAnswer('🙌 Hola bienvenid@ a *Beauty&Chic* 💜💜')
     .addAnswer(
         [
