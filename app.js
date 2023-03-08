@@ -56,15 +56,12 @@ const flowPrincipal = addKeyword(['cita', 'citas', 'sita', 'sitas', 'tendrás es
             'puedes usar este enlace!!!',
             '👉 https://book.heygoldie.com/Beauty-Chic',
             ' *Gracias* 😊',
-        ],
-        null,
-        null,
-        [flowFoto]
+        ]
     )
 
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flowPrincipal])
+    const adapterFlow = createFlow([flowPrincipal,flowFoto])
     const adapterProvider = createProvider(BaileysProvider)
 
     createBot({
