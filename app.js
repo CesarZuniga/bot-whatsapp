@@ -54,7 +54,7 @@ const flowPrincipal = addKeyword(['cita', 'citas', 'sita', 'sitas'])
         [
             'para checar precios, servicios y agendar Cita',
             'puedes usar este enlace!!!',
-            '👉 https://book.heygoldie.com/Beauty-Chic  para ver la lista de videos',
+            '👉 https://book.heygoldie.com/Beauty-Chic',
             '👉 *gracias* ',
         ]
     )
