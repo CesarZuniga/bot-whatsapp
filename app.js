@@ -48,7 +48,7 @@ const flowFoto = addKeyword(['foto']).addAnswer(
     ]
 )
 
-const flowPrincipal = addKeyword(['cita', 'citas', 'sita', 'sitas', 'tendrás espacio','tendras espacio','tienes espacio', 'agenda', 'pestaña'])
+const flowPrincipal = addKeyword(['cita', 'citas', 'tendrás espacio','tendras espacio','tienes espacio', 'agenda', 'pestaña'])
     .addAnswer('🙌 Hola bienvenid@ a *Beauty&Chic* 💜💜')
     .addAnswer(
         [
