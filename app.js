@@ -41,12 +41,12 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 //     [flowSecundario]
 // )
 
-// const flowDiscord = addKeyword(['discord']).addAnswer(
-//     ['🤪 Únete al discord', 'https://link.codigoencasa.com/DISCORD', '\n*2* Para siguiente paso.'],
-//     null,
-//     null,
-//     [flowSecundario]
-// )
+const flowFoto = addKeyword(['foto']).addAnswer(
+    [
+        'Para ingresar a las fotos puedes usar este enlace!!',
+        '👉 https://wa.me/c/5213921283586'
+    ]
+)
 
 const flowPrincipal = addKeyword(['cita', 'citas', 'sita', 'sitas', 'tendrás espacio','tendras espacio','tienes espacio', 'agenda', 'pestaña'])
     .addAnswer('🙌 Hola bienvenid@ a *Beauty&Chic* 💜💜')
@@ -56,7 +56,10 @@ const flowPrincipal = addKeyword(['cita', 'citas', 'sita', 'sitas', 'tendrás es
             'puedes usar este enlace!!!',
             '👉 https://book.heygoldie.com/Beauty-Chic',
             ' *Gracias* 😊',
-        ]
+        ],
+        null,
+        null,
+        [flowFoto]
     )
 
 const main = async () => {
