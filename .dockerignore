@@ -1,4 +1,7 @@
-Dockerfile
-.dockerignore
+dist/*
 node_modules
-.git
+.env
+
+*_sessions
+*tokens
+.wwebjs*

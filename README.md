@@ -1,22 +1,30 @@
-### CHATBOT Whatsapp (Baileys Provider)
+# Bot de Citas WhatsApp 🤖💈
 
-<p align="center">
-  <img width="300" src="https://i.imgur.com/Oauef6t.png">
-</p>
+Bot automatizado para gestión de citas usando WhatsApp, Gemini AI y Google Calendar.
 
+## Características
 
-**Con esta librería, puedes construir flujos automatizados de conversación de manera agnóstica al proveedor de WhatsApp,** configurar respuestas automatizadas para preguntas frecuentes, recibir y responder mensajes de manera automatizada, y hacer un seguimiento de las interacciones con los clientes.  Además, puedes configurar fácilmente disparadores que te ayudaran a expandir las funcionalidades sin límites. **[Ver documentación](https://bot-whatsapp.netlify.app/)**
+- ✅ Agendamiento automático de citas
+- 🤖 Análisis de mensajes con Gemini AI
+- 📅 Integración con Google Calendar
+- ⚡ Verificación de disponibilidad en tiempo real
+- 💬 Interfaz conversacional natural
 
+## Configuración Requerida
 
-```
-npm install
-npm start
-```
+### 1. Gemini AI
+- Obtén tu API key en [Google AI Studio](https://makersuite.google.com/app/apikey)
 
----
-## Recursos
-- [📄 Documentación](https://bot-whatsapp.netlify.app/)
-- [🚀 Roadmap](https://github.com/orgs/codigoencasa/projects/1)
-- [💻 Discord](https://link.codigoencasa.com/DISCORD)
-- [👌 Twitter](https://twitter.com/leifermendez)
-- [🎥 Youtube](https://www.youtube.com/watch?v=5lEMCeWEJ8o&list=PL_WGMLcL4jzWPhdhcUyhbFU6bC0oJd2BR)
+### 2. Google Calendar API
+- Crea un proyecto en [Google Cloud Console](https://console.cloud.google.com)
+- Habilita Google Calendar API
+- Crea una Service Account y descarga las credenciales
+
+### 3. Variables de Entorno
+Copia `.env.example` a `.env` y configura:
+
+```env
+GEMINI_API_KEY=tu_api_key
+GOOGLE_CALENDAR_ID=tu_calendario@gmail.com
+GOOGLE_SERVICE_ACCOUNT_EMAIL=tu_service_account@project.iam.gserviceaccount.com
+GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n..."

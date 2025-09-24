@@ -1,5 +1,10 @@
+dist/*
 node_modules
-node_modules/*
-baileys.log
-bot.qr.png
+.env
+
+*_sessions
+*tokens
+.wwebjs*
+
 *.log
+*qr.png
